@@ -1,6 +1,6 @@
 Name:       libdvbpsi
 Version:    1.3.0
-Release:    2%{?dist}
+Release:    3%{?dist}
 Summary:    Library for MPEG TS and DVB PSI tables decoding and generation
 License:    LGPLv2+
 URL:        http://www.videolan.org/developers/%{name}.html
@@ -10,6 +10,7 @@ Source0:    http://download.videolan.org/pub/%{name}/%{version}/%{name}-%{versio
 BuildRequires:  automake
 BuildRequires:  autoconf
 BuildRequires:  doxygen
+BuildRequires:  gcc
 BuildRequires:  graphviz
 BuildRequires:  libtool
 
@@ -57,6 +58,9 @@ rm -f %{buildroot}%{_libdir}/lib*.la
 %{_libdir}/pkgconfig/%{name}.pc
 
 %changelog
+* Thu Sep 20 2018 Simone Caronni <negativo17@gmail.com> - 1.3.0-3
+- Add GCC build requirement.
+
 * Mon May 02 2016 Simone Caronni <negativo17@gmail.com> - 1.3.0-2
 - SPEC file cleanup.
 
